@@ -1,0 +1,20 @@
+.inputInnerContainer {
+  display: flex;
+  height: 100%;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  box-shadow: var(--neumorph-inset-shadow);
+  color: var(--text-color);
+  overflow: hidden;
+  border-bottom-right-radius: var(--ui-corner-radius);
+  border-top-right-radius: var(--ui-corner-radius);
+}
+
+.inputBase {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 12px 10px;
+  border: none;
+}

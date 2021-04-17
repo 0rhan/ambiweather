@@ -1,0 +1,7 @@
+.inputIcon {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 8px;
+}
