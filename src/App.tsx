@@ -1,8 +1,13 @@
+import TitleClock from "./UI/Components/TitleClock";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <>
+      <TitleClock />
+      <div className="App">
+        <header className="App-header"></header>
+      </div>
+    </>
   );
 }
 
