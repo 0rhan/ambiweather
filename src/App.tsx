@@ -1,11 +1,14 @@
-import TitleClock from "./UI/Components/TitleClock";
+import Time from "./lib/Time";
 
 function App() {
+  const time = new Time();
+  console.log(time.getTimeOfDay())
+
   return (
     <>
-      <TitleClock />
       <div className="App">
         <header className="App-header"></header>
+        <div id="shit"></div>
       </div>
     </>
   );

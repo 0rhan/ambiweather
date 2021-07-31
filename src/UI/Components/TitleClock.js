@@ -1,5 +1,4 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import useClock from "../../hooks/useClock";
 
 const TitleClock = () => {
 
