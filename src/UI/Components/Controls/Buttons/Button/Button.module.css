@@ -1,0 +1,48 @@
+.button {
+  margin: 100px;
+  background: var(--neumorph-bg-gradient);
+  text-shadow: 0 0 0 var(--primary-blue);
+  box-shadow: var(--neumorph-outset-shadow);
+  height: 42px;
+  color: var(--text-color);
+  transition: color .2s, text-shadow var(--glow-transition);
+  user-select: none;
+}
+
+.button:hover:enabled, .button:focus:enabled, .button:focus-visible:enabled {
+  text-shadow: 0 0 10px var(--primary-white);
+}
+
+.button:active:enabled {
+  box-shadow: var(--neumorph-inset-shadow);
+  text-shadow: 0 0 10px var(--primary-white);
+}
+
+button:disabled {
+  background: none;
+  background-color: gray;
+  cursor: not-allowed;
+  text-shadow: none;
+  box-shadow: var(--neumorph-outset-shadow);
+}
+
+.text {
+ padding-left: 8px;
+ padding-right: 8px;
+}
+
+
+.primary {
+  background: var(--button-primary-bg-gradient);
+}
+
+.success {
+}
+
+.warning {
+
+}
+
+.danger {
+}
+

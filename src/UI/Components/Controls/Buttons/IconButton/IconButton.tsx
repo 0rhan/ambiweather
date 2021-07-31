@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import Button from "../Base/Button";
+import ButtonBase from "../ButtonBase/ButtonBase";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
-import style from "./iconButton.module.css"
+import style from "./IconButton.module.css"
 
 interface IconButtonProps {
   children?: ReactNode;
@@ -9,12 +9,12 @@ interface IconButtonProps {
 
 const IconButton = ({ children, ...props }: IconButtonProps) => {
   return (
-    <Button className={style.container} {...props}>
+    <ButtonBase className={style.container} {...props}>
       {children}
       <span>
         <SearchRoundedIcon />
       </span>
-    </Button>
+    </ButtonBase>
   );
 };
 

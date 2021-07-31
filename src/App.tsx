@@ -1,11 +1,16 @@
-import TextInput from "./UI/Components/Controllers/Inputs/Base/TextInput/TextInput";
+import { BrowserRouter as Router } from "react-router-dom";
+import InputBase from "UI/Components/Controls/Inputs/InputBase/InputBase"
+import Button from "UI/Components/Controls/Buttons/Button/Button"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-      <TextInput type="search" name="City name"/>
-    </div>
+    <Router>
+      <div className="App darkTheme">
+        <header className="App-header"></header>
+        <Button variant="primary"> Button text</Button>
+        <InputBase name="search" inputLabel="City name"/>
+      </div>
+    </Router>
   );
 }
 

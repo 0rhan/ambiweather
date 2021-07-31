@@ -1,0 +1,6 @@
+.base {
+  border-radius: var(--ui-corner-radius);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+}
