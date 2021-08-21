@@ -27,17 +27,17 @@ class BrowserGeoLocationService {
 
   geoCoords: GeoCoords | undefined = undefined;
 
-  // Error object when browser doesnt have Geolocation API
+  // Error object when browser doesn't have Geolocation API
   private geoLocationAPIError: Error = new Error(
     "Geolocation API is not available in this browser"
   );
 
-  private checkGolocationAPIIAvailability(): void {
-    const geolocationAPINotAvaialale:boolean = !this.geoLocationAPIIsAvailable;
+  private checkGeolocationAPIIAvailability(): void {
+    const geolocationAPINotAvailable:boolean = !this.geoLocationAPIIsAvailable;
 
     /* Check if browser have Geolocation API
      Throw error when browser doesn't have Geolocation API */
-    if (geolocationAPINotAvaialale) throw this.geoLocationAPIError;
+    if (geolocationAPINotAvailable) throw this.geoLocationAPIError;
   }
 
   public checkGeoLocationDataInLocalStorage(): Boolean {
@@ -84,7 +84,7 @@ class BrowserGeoLocationService {
 
   private async asyncGetCurrentPosition(): Promise<GeoLocationPromiseResult> {
     // throws error when browser geolocation API is not supported
-    this.checkGolocationAPIIAvailability();
+    this.checkGeolocationAPIIAvailability();
     try {
       const { getCurrentPosition } = navigator.geolocation;
 
@@ -106,15 +106,19 @@ class BrowserGeoLocationService {
       return geolocationPromiseResult;
     } catch (error) {
       // set permission status to false
-      if (error.code === 1) {
-        this.geoLocationPermission = false;
+      if(error instanceof GeolocationPositionError) {
+        if (error.code === 1) {
+          this.geoLocationPermission = false;
+        }
+        console.log("error in GeoLocationService", error);
+        return error;
+      } else {
+          return new GeolocationPositionError()
       }
-      console.log("error in GeoLocationService", error);
-      return error;
-    }
+      }
   }
 
-  private async startLocationService(): Promise<GeoCoords | void> {
+  private async startLocationService(): Promise<GeoCoords | GeolocationPositionError | void> {
     try {
       const geoLocationPromiseResult: GeoLocationPromiseResult =
         await this.asyncGetCurrentPosition();
@@ -131,7 +135,9 @@ class BrowserGeoLocationService {
       }
     } catch (error) {
       console.log("error in GeoLocationService", error);
-      return error;
+      if(error instanceof GeolocationPositionError) {
+        return error;
+      }
     }
   }
 
