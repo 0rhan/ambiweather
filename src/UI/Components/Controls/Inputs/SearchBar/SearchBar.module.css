@@ -1,0 +1,26 @@
+.searchBar {
+  composes: rootContainer from "../../../../Components/Controls/Inputs/InputBase/InputRootContainer/inputRootContainer.module.css";
+  grid-template: 1fr / 1fr;
+  margin: 0;
+  width: 100%;
+  box-shadow: var(--neumorph-inset-shadow);
+  background: #cccccc;
+}
+
+.searchBar input {
+  color: var(--primary-gray);
+  padding: 12px 14px;
+}
+
+.searchBar input::placeholder {
+  color: var(--primary-gray);
+}
+
+.searchBar svg {
+  color: var(--primary-black);
+}
+
+.searchBar:hover, .searchBar:focus-within {
+  box-shadow: var(--neumorph-inset-shadow)
+}
+

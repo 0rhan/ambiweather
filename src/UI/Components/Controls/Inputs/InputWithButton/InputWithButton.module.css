@@ -1,0 +1,33 @@
+.inputWithButtonInnerContainer {
+  composes: inputInnerContainer from "../InputBase/InputBase.module.css"
+}
+
+.inputWithButton {
+  composes: inputBase from "../InputBase/InputBase.module.css"
+}
+
+.inputButton {
+  composes: container from "../../Buttons/IconButton/IconButton.module.css";
+  width: 48px;
+}
+
+.inputButton:hover {
+  color: var(--primary-light-blue);
+}
+
+.inputButton svg {
+  transition: filter var(--glow-transition);
+}
+
+.inputButton:hover svg {
+  filter: drop-shadow(0px 0px 4px var(--primary-light-blue)); 
+}
+
+.inputButton:active {
+  box-shadow: var(--neumorph-inset-shadow);
+  color: var(--primary-blue);
+}
+
+.inputButton:active svg {
+  filter: drop-shadow(0px 0px 4px var(--primary-blue)); 
+}

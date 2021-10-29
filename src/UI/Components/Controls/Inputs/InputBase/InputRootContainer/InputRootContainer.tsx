@@ -1,13 +1,17 @@
 import { ReactNode } from "react";
-import style from "./inputRootContainer.module.css";
+import styles from "./inputRootContainer.module.css";
 
 interface ContainerProps {
   /** Container content */
   children: ReactNode;
+  className?: string;
 }
 
-const InputRootContainer = ({ children }: ContainerProps) => {
-  return <div className={style.rootContainer}>{children}</div>;
+const InputRootContainer = ({
+  children,
+  className = styles.rootContainer,
+}: ContainerProps) => {
+  return <div className={className}>{children}</div>;
 };
 
 export default InputRootContainer;

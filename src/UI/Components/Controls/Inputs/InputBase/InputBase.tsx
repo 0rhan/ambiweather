@@ -1,19 +1,8 @@
-import { InputHTMLAttributes } from "react";
-import style from "./inputBase.module.css";
+import styles from "./InputBase.module.css";
 import InputRootContainer from "./InputRootContainer/InputRootContainer";
 import InputLabel from "./InputLabel/InputLabel";
 import InputIcon from "./InputIcon/InputIcon";
-import { SvgIconComponent } from "@material-ui/icons";
-
-// Basic input component for "text like" input
-// Used for creating more complex input components
-interface InputBaseProps extends InputHTMLAttributes<HTMLInputElement> {
-  /** Input type attribute */
-  /** SvgIconComponent displayed inside input */
-  inputIcon?: SvgIconComponent;
-  inputLabel: string;
-  name: string;
-}
+import { InputBaseProps } from "./types";
 
 const InputBase = ({
   type,
@@ -21,14 +10,21 @@ const InputBase = ({
   inputLabel,
   placeholder,
   inputIcon: Icon,
+  iconSide = "left",
+  className,
 }: InputBaseProps) => {
   return (
-    <InputRootContainer>
-      <InputLabel text={inputLabel} htmlFor={name} />
-      <div className={style.inputInnerContainer}>
+    <InputRootContainer className={className}>
+      {inputLabel && <InputLabel text={inputLabel} htmlFor={name} />}
+      <div
+        className={styles.inputInnerContainer}
+        style={{
+          flexDirection: `${iconSide === "right" ? "row-reverse" : "row"}`,
+        }}
+      >
         {Icon && <InputIcon icon={Icon} />}
         <input
-          className={style.inputBase}
+          className={styles.inputBase}
           type={type}
           name={name}
           placeholder={placeholder}
