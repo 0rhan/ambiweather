@@ -1,21 +1,22 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
-import style from "./ButtonBase.module.css";
+import styles from "./ButtonBase.module.css";
 
 // Basic button component for building other button variants
-export interface ButtonBaseProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonBaseProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
 const ButtonBase = ({
   type = "button",
   children,
-  className = "",
+  className = styles.buttonBase,
   onClick,
   disabled,
 }: ButtonBaseProps) => {
   return (
     <button
-      className={`${style.base} ${className}`}
+      className={className}
       type={type}
       onClick={onClick}
       disabled={disabled}

@@ -1,26 +1,26 @@
-import { ReactText } from "react";
+import { ReactChild } from "react";
 import ButtonBase, { ButtonBaseProps } from "../ButtonBase/ButtonBase";
-import style from "./Button.module.css";
+import styles from "./Button.module.css";
 
 export interface ButtonProps extends ButtonBaseProps {
-  children: ReactText;
+  children: ReactChild | ReactChild[];
   variant?: "success" | "danger" | "warning" | "primary";
 }
 
 const Button = ({
-  className = "",
+  className = styles.button,
   children,
   variant,
   disabled,
 }: ButtonProps) => {
 
-  const buttonVariant = `${variant ? style[variant] : ""}`;
+  const buttonVariant = `${variant ? styles[variant] : ""}`;
 
-  const classes = `${style.button} ${buttonVariant} ${className}`;
+  const classes = `${className} ${buttonVariant}`;
 
   return (
     <ButtonBase className={classes} disabled={disabled}>
-      <span className={style.text}>{children}</span>
+      <span className={styles.text}>{children}</span>
     </ButtonBase>
   );
 };

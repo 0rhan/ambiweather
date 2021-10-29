@@ -1,6 +1,11 @@
-.base {
+.buttonBase {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
   border-radius: var(--ui-corner-radius);
   color: var(--text-color);
   border: none;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }

@@ -1,18 +1,29 @@
 import { ReactNode } from "react";
 import ButtonBase from "../ButtonBase/ButtonBase";
-import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
-import style from "./IconButton.module.css"
+import { SvgIconComponent } from "@material-ui/icons";
+import { MouseEventHandler } from "react";
+import style from "./IconButton.module.css";
 
 interface IconButtonProps {
   children?: ReactNode;
+  icon: SvgIconComponent;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+  className?: string;
 }
 
-const IconButton = ({ children, ...props }: IconButtonProps) => {
+const IconButton = ({
+  children,
+  icon: Icon,
+  onClick,
+  className = style.container,
+  ...props
+}: IconButtonProps) => {
   return (
-    <ButtonBase className={style.container} {...props}>
+    <ButtonBase className={className} onClick={onClick} {...props}>
       {children}
       <span>
-        <SearchRoundedIcon />
+        <Icon />
       </span>
     </ButtonBase>
   );
