@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //import locator, { GeoCoords } from "lib/geolocationService";
 //import { requestWeatherByGeoCoordinates } from "api/sources/weatherData";
 //import { useEffect, useState } from "react";

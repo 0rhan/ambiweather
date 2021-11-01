@@ -1,0 +1,39 @@
+.indicatorContainer {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  height: 100%;
+  border-radius: var(--ui-corner-radius);
+  width: max-content;
+  height: max-content;
+  padding: 4px 8px 4px;
+  background: var(--neumorph-bg-gradient);
+  box-shadow: var(--neumorph-outset-shadow);
+  user-select: none;
+}
+
+.indicatorTitleContainer {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: column nowrap;
+  color: var(--text-color);
+  font-size: 12px;
+  padding: 4px 2px 4px;
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicatorTitle {
+  margin-top: 2px;
+  color: var(--fluent-white);
+}
+
+
+.indicatorContent { 
+  font-size: 16px;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  justify-content: center;
+}

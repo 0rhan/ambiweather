@@ -1,0 +1,52 @@
+.button {
+  composes: buttonBase from "../ButtonBase/ButtonBase.module.css";
+  background: var(--neumorph-bg-gradient);
+  text-shadow: 0 0 0 var(--primary-blue);
+  box-shadow: var(--neumorph-outset-shadow);
+  height: 42px;
+  color: var(--text-color);
+  transition: color .2s, text-shadow var(--glow-transition);
+  user-select: none;
+  width: max-content;
+}
+
+.button:hover:enabled, .button:focus:enabled, .button:focus-visible:enabled {
+  text-shadow: 0 0 10px var(--primary-white);
+}
+
+.button:active:enabled {
+  box-shadow: var(--neumorph-inset-shadow);
+  text-shadow: 0 0 10px var(--primary-white);
+}
+
+button:disabled {
+  background: none;
+  background-color: gray;
+  cursor: not-allowed;
+  text-shadow: none;
+  box-shadow: var(--neumorph-outset-shadow);
+}
+
+.text {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0px 2px;
+}
+
+
+.primary {
+  background: var(--button-primary-bg-gradient);
+}
+
+.success {
+}
+
+.warning {
+
+}
+
+.danger {
+}
+

@@ -1,0 +1,30 @@
+.panelContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  background: var(--neumorph-bg-gradient);
+  border-radius: 20px; 
+  margin: 16px 0px;
+  height: 180px;
+}
+
+.panelContent {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 1 auto;
+  white-space: nowrap;
+  border-radius: inherit;
+  width: 100%;
+  padding: 4px;
+  margin: 0;
+  box-sizing: border-box;
+  align-items: center;
+  box-shadow: var(--neumorph-inset-shadow);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.panelContent::-webkit-scrollbar {
+    display: none;
+}
+

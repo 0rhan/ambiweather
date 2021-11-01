@@ -1,0 +1,11 @@
+.container {
+  composes: buttonBase from "../ButtonBase/ButtonBase.module.css";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container:disabled {
+  cursor: not-allowed;
+  color: var(--fluent-white);
+}

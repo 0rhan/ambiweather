@@ -1,0 +1,22 @@
+.rootContainer {
+  position: relative;
+  display: grid;
+  grid-template: 48px / minmax(max-content, auto) minmax(150px, 200px);
+  grid-auto-flow: column;
+  margin-top: 14px;
+  width: fit-content;
+  outline: none;
+  cursor: text;
+  background: var(--neumorph-bg-gradient);
+  border-radius: var(--ui-corner-radius);
+  box-shadow: var(--neumorph-outset-shadow);
+  transition: box-shadow var(--glow-transition);
+}
+
+.rootContainer:hover {
+  box-shadow: var(--input-glow)
+}
+
+.rootContainer:focus-within {
+  box-shadow: var(--input-glow)
+}
