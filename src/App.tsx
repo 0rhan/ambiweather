@@ -1,5 +1,5 @@
 import LocationSearchScreen from "UI/Domains/LocationSearchScreen/LocationSearchScreen";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import WeatherScreen from "UI/Domains/WeatherScreen/WeatherScreen";
 import { useState } from "react";
 import BrowserGeoLocationService, {
