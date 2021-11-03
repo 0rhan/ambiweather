@@ -5,12 +5,14 @@ import InputIcon from "../InputBase/InputIcon/InputIcon";
 import InputLabel from "../InputBase/InputLabel/InputLabel";
 import { InputBaseProps } from "../InputBase/types";
 import IconButton from "UI/Components/Controls/Buttons/IconButton/IconButton";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, ChangeEventHandler } from "react";
 
 type InputWithButtonProps = Omit<InputBaseProps, "onClick"> & {
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   buttonIcon: SvgIconComponent;
   buttonText?: string;
+  disableButton?: boolean;
 };
 
 const InputWithButton = ({
@@ -24,11 +26,10 @@ const InputWithButton = ({
   onClick,
   onChange,
   inputIcon: Icon,
+  disableButton,
 }: InputWithButtonProps) => {
   return (
-    <InputRootContainer
-      className={styles.inputWithButtonInnerContainerLeftIcon}
-    >
+    <InputRootContainer>
       {inputLabel && <InputLabel text={inputLabel} htmlFor={name} />}
       <div
         className={styles.inputWithButtonInnerContainer}
@@ -49,6 +50,7 @@ const InputWithButton = ({
         className={styles.inputButton}
         onClick={onClick}
         icon={buttonIcon}
+        disabled={disableButton}
       >
         {buttonText}
       </IconButton>

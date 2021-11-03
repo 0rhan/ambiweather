@@ -6,8 +6,6 @@
   box-shadow: var(--neumorph-inset-shadow);
   color: var(--text-color);
   overflow: hidden;
-  border-bottom-right-radius: var(--ui-corner-radius);
-  border-top-right-radius: var(--ui-corner-radius);
 }
 
 .inputBase {

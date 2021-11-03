@@ -9,3 +9,7 @@
   justify-content: center;
   cursor: pointer;
 }
+
+.buttonBase:disabled {
+  background-color: var(--primary-light-gray);
+}

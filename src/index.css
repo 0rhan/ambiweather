@@ -17,6 +17,7 @@
   --fluent-white: rgb(246 246 248 / 75%);
   --fluent-gray: hsl(0deg 0% 65% / 60%); 
   --primary-gray: #2b2d3d;
+  --primary-light-gray: hsl(233deg 11% 38%);
   --primary-gray-A70: hsl(233deg 17% 20% / 50%);
   --primary-black-A70: hsl(219deg 22% 15% / 50%);
   --dark-shadow-color: hsl(225deg 35% 7% / 39%);

@@ -12,14 +12,14 @@ const Button = ({
   children,
   variant,
   disabled,
+  ...props
 }: ButtonProps) => {
-
   const buttonVariant = `${variant ? styles[variant] : ""}`;
 
   const classes = `${className} ${buttonVariant}`;
 
   return (
-    <ButtonBase className={classes} disabled={disabled}>
+    <ButtonBase className={classes} disabled={disabled} {...props}>
       <span className={styles.text}>{children}</span>
     </ButtonBase>
   );

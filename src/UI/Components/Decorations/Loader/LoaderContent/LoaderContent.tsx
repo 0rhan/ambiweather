@@ -10,7 +10,7 @@ const LoaderContent = ({
   className = styles.loaderContent,
   children,
 }: LoaderProps) => {
-  return <div className={className}>{children}</div>;
+  return <div className={className}>{children}</div>
 };
 
 export default LoaderContent;

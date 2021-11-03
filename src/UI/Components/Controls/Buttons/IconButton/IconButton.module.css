@@ -9,3 +9,11 @@
   cursor: not-allowed;
   color: var(--fluent-white);
 }
+
+.container:disabled:active {
+  filter: none;
+}
+
+.container:disabled:hover svg {
+  filter: none;
+}
