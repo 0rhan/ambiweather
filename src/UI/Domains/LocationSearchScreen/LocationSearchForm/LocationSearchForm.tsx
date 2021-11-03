@@ -23,7 +23,6 @@ const LocationSearchForm = ({
 
   const onChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
     setCityName(event.currentTarget.value);
-    console.log(cityName);
   };
 
   return (
