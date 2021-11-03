@@ -5,15 +5,13 @@ class Fetcher {
   appid: string = DEFAULT_APP_ID;
 
   constructor(appid?: string) {
-
-    if(typeof appid === "string") {
+    if (typeof appid === "string") {
       this.appid = appid;
     }
   }
 
   // Method for creating query url from object params
-  private createRequestURL(url: string, query: any):string {
-
+  private createRequestURL(url: string, query: any): string {
     const params = {
       ...query,
       appid: this.appid,
@@ -24,22 +22,25 @@ class Fetcher {
     return `${this.baseURL}${url}?${queryString}`;
   }
 
+  private handleResponseError(response: Response) {
+    if (!response.ok) {
+      throw Error("fetching error");
+    }
+  }
+
   // Method for get request
   async get(url: string, query: any) {
-    try {
       //stringify params object to query string
-      const requestURL:string = this.createRequestURL(url, query);
+      const requestURL: string = this.createRequestURL(url, query);
 
       // fetch configs
       const config = { method: "GET" };
 
       const response = await fetch(requestURL, config);
-
-      return response.json();
-    } catch (e) {
-      console.log(e);
+      this.handleResponseError(response);
+      const responseContent = await response.json();
+      return responseContent;
     }
-  }
 }
 
 export default new Fetcher();
