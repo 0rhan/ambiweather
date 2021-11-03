@@ -1,37 +1,44 @@
-<<<<<<< HEAD
-//import locator, { GeoCoords } from "lib/geolocationService";
-//import { requestWeatherByGeoCoordinates } from "api/sources/weatherData";
-//import { useEffect, useState } from "react";
-import WeatherDataSearch from "Domains/StartScreen/WeatherDataSearch/WeatherDataSearch"
+import LocationSearchScreen from "UI/Domains/LocationSearchScreen/LocationSearchScreen";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import WeatherScreen from "UI/Domains/WeatherScreen/WeatherScreen";
+import { useState } from "react";
+import BrowserGeoLocationService, {
+  GeoCoords,
+} from "lib/geolocation/browserGeolocationService";
+
+const locator = new BrowserGeoLocationService();
 
 function App() {
-  //const [weatherTemp, setWeather] = useState<any>(0);
+  const [geoCoords, setGeoCoords] = useState<GeoCoords | null>(
+    locator.readGeoCoordsFromLocalStorage()
+  );
 
-  //async function getWeatherByCoords() {
-
-    //const geoCoords: GeoCoords = await locator.getGeoCoords();
-    //// try catch geoCoords 
-    //// [catch]
-    //// set State GeoLocationApiIsNotAvailable to false
-    //// prompt search bar component for searching location
-    //// and button "Try Again"
-    //// use requestWeatherByLocatioName
-    //// ^ separate all this to another function "getGeoGoords"
-
-    //const weatherData: any = await requestWeatherByGeoCoordinates(geoCoords);
-
-    //console.log(weatherData);
-    //setWeather(weatherData.main.temp);
-  //}
-
-  //useEffect(() => {
-    //getWeatherByCoords();
-  //}, []);
+  const [cityName, setCityName] = useState<string | null>(
+    localStorage.getItem("city name")
+  );
 
   return (
-    <div className="App">
-      <header className="App-header"></header>
-      <WeatherDataSearch/>
+    <div className="App darkTheme">
+      <Router basename="/">
+        <Switch>
+          <Route exact path="/">
+            <LocationSearchScreen
+              setGeoCoords={setGeoCoords}
+              geoCoords={geoCoords}
+              setCityName={setCityName}
+              cityName={cityName}
+            />
+          </Route>
+          <Route path="/weather">
+            <WeatherScreen
+              geoCoords={geoCoords}
+              cityName={cityName}
+              setGeoCoords={setGeoCoords}
+              setCityName={setCityName}
+            />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

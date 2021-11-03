@@ -1,0 +1,18 @@
+.dateTimeDisplay {
+  display: grid;
+  grid-template: repeat(2, min-content) / 1fr;
+  width: 100%;
+  justify-items: center;
+  align-self: center;
+}
+
+.date {
+  composes: date from "./Date/Date.module.css";
+  font-size: 18px;
+}
+
+.time {
+  font-size: 32px;
+  align-self: end;
+  composes: time from "./Time/Time.module.css";
+}

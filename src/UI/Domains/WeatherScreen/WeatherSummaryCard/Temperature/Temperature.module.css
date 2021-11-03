@@ -1,0 +1,27 @@
+.temperature {
+  font-size: 86px;
+  align-self: center;
+  color: var(--fluent-white);
+}
+
+/* ---[WEATHER TEMPERATURE SPECTRUM STYLES]--- */
+.cold {
+  color: var(--weather-temp-cold);
+}
+
+.zero {
+  color: var(--weather-temp-zero);
+}
+
+.chilly {
+  color: var(--weather-temp-chilly);
+  text-shadow: 0 0 6px hsl(100deg 63% 59% / 65%);;
+}
+
+.warmly {
+  color: var(--weather-temp-warmly);
+}
+
+.hot {
+  color: var(--weather-temp-hot);
+}

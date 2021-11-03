@@ -1,0 +1,5 @@
+.startScreenContainer {
+  display: grid;
+  grid-template: 2fr 1fr / 1fr;
+  align-items: center;
+}

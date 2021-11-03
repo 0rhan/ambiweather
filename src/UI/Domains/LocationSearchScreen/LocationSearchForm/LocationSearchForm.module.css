@@ -1,0 +1,27 @@
+.locationSearchForm {
+  display: grid;
+  grid-template: min-content /  min-content;
+  justify-items: center;
+  justify-content: center;
+  grid-auto-flow: row;
+  gap: 44px;
+}
+
+.locationSearchForm > div {
+  margin-top: 0;
+}
+
+@media (width > 424px) {
+  .locationSearchForm {
+    grid-template: min-content / minmax(320px, 380px);
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+@media (width > 459px) {
+  .locationSearchForm {
+    grid-template: min-content / 400px;
+  }
+}

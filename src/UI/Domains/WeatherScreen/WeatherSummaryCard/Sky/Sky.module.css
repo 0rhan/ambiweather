@@ -1,0 +1,18 @@
+.skyStateIcon {
+  width: 200px;
+  height: 200px;
+}
+
+@media (width > 767px) {
+  .skyStateIcon {
+    width: 248px;
+    height: 248px;
+  }
+}
+
+@media (width > 1023px) {
+  .skyStateIcon {
+    width: 380px;
+    height: 380px;
+  }
+}

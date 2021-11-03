@@ -1,0 +1,25 @@
+.weatherScreen {
+  display: grid;
+  grid-template: repeat(2, min-content) / 1fr;
+  background: var(--weather-gradient-clear);
+  padding: 8px;
+}
+
+.weatherScreenError {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  grid-template: repeat(2, max-content) / max-content;
+  gap: 20px;
+}
+
+.weatherScreenErrorText {
+  color: var(--primary-red);
+  text-transform: uppercase;
+}
+
+@media (width > 1199px) {
+  .weatherScreen {
+    box-shadow: var(--neumorph-outset-shadow); 
+  }
+}
