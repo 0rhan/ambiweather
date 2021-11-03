@@ -1,4 +1,4 @@
-export const BASE_URL:string = "http://api.openweathermap.org"
+export const BASE_URL:string = "https://api.openweathermap.org"
 // API resource for getting weather data 
 export const WEATHER_DATA_RESOURCE:string = "/data/2.5/weather"
 // API resource for search locations
