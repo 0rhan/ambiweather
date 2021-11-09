@@ -1,3 +1,28 @@
+<h2 align="center">
+  ⚠️ WIP ⚠️ 
+  Created for educational purposes.
+</h2>
+
+<h3 align="center">Ambiweather</h3>
+
+<h2>
+  Description:
+</h2>
+
+<p>Weather app</p>
+
+<p>Made with:</p>
+
+ * TypeScript
+ * React
+ * CSS Modules
+ * OpenWeather API
+
+
+<h2> Preview: </h2>
+
+https://user-images.githubusercontent.com/33350605/140956369-a44b7d46-f47e-48c0-b910-d5e4660a66e8.mp4
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
