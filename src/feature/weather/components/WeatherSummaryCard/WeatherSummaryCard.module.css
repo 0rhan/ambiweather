@@ -1,0 +1,28 @@
+.weatherSummaryCardContainer {
+  composes: cardContainer from "../../../../components/DataDisplay/Card/Card.module.css";
+  display: grid;
+  grid-template:  repeat(3, min-content)/ 1fr;
+  justify-items: center;
+  box-shadow: none;
+  background: none;
+  user-select: none;
+  box-sizing: border-box;
+  padding: 16px 0;
+  justify-self: center;
+  position: relative;
+  width: 100%;
+  border: 0px solid;
+  overflow: hidden;
+  border-bottom-left-radius: var(--ui-corner-radius);
+  border-bottom-right-radius: var(--ui-corner-radius);
+}
+
+
+@media (width > 380px) {
+  .weatherSummaryCardContainer {
+    justify-content: center;
+  }
+  .weatherSummaryContent {
+    margin-left: 40px;
+  }
+}

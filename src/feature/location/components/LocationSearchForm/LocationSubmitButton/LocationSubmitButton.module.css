@@ -1,0 +1,22 @@
+.locationSubmitButton {
+  composes: container from "../../../../../components/Controls/Buttons/IconButton/IconButton.module.css";
+  box-shadow: var(--neumorph-outset-shadow);
+  width: 42px;
+  height: 42px;
+  color: var(--primary-green);
+  transition: filter var(--glow-transition);
+}
+
+.locationSubmitButton:hover svg {
+  filter: drop-shadow(0px 0px 5px var(--primary-green)); 
+  transition: filter var(--glow-transition);
+}
+
+.locationSubmitButton:disabled {
+  box-shadow: var(--neumorph-inset-shadow);
+}
+
+.locationSubmitButton:active {
+  box-shadow: var(--neumorph-inset-shadow);
+  filter: drop-shadow(0px 0px 2px var(--primary-green)); 
+}

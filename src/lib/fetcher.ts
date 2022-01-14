@@ -1,4 +1,4 @@
-import { BASE_URL, DEFAULT_APP_ID } from "api/constants/";
+import { BASE_URL, DEFAULT_APP_ID } from "config";
 
 class Fetcher {
   baseURL: string = BASE_URL;

@@ -1,0 +1,18 @@
+.sunIndicator {
+  composes: indicatorContent from "../../../../../../components/DataDisplay/Indicators/Indicator/Indicator.module.css";
+  justify-content: space-between;
+}
+
+.sunIndicator > * {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.sunIndicator > *:last-child {
+  margin-left: 8px;
+}
+
+.sunset, .sunrise {
+}

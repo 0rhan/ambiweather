@@ -1,0 +1,28 @@
+.windIndicator {
+  composes: indicatorContent from "../../../../../../components/DataDisplay/Indicators/Indicator/Indicator.module.css";
+}
+
+.windIndicator > * {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.windIndicator > *:last-child {
+  margin-left: 8px;
+}
+
+.windIndicator svg {
+  margin-right: 4px;
+}
+
+.windDeg {
+  display: grid; 
+  grid-template: 1fr / max-content max-content;
+}
+
+.windDeg > svg {
+  transform: rotateZ(90deg);
+  transform-origin: center;
+}

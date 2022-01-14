@@ -1,3 +1,0 @@
-.loaderOverlayContainer {
-  composes: loaderFullScreenOverlay from "../../../Components/Decorations/Loader/LoaderFullScreenOverlay/LoaderFullScreenOverlay.module.css";
-}

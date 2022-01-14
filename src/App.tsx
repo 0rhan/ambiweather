@@ -1,10 +1,10 @@
-import LocationSearchScreen from "UI/Domains/LocationSearchScreen/LocationSearchScreen";
+import LocationSearchScreen from "feature/location/components/LocationSearchScreen";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import WeatherScreen from "UI/Domains/WeatherScreen/WeatherScreen";
+import WeatherScreen from "feature/weather/WeatherScreen";
 import { useState } from "react";
 import BrowserGeoLocationService, {
   GeoCoords,
-} from "lib/geolocation/browserGeolocationService";
+} from "feature/location/lib/browserGeolocationService";
 
 const locator = new BrowserGeoLocationService();
 

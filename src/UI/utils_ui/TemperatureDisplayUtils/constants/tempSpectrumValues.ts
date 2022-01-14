@@ -1,5 +1,0 @@
-export const TEMP_SPECTRUM_ZERO = "zero"
-export const TEMP_SPECTRUM_COLD = "cold"
-export const TEMP_SPECTRUM_CHILLY = "chilly"
-export const TEMP_SPECTRUM_WARMLY = "warmly"
-export const TEMP_SPECTRUM_HOT = "hot"
