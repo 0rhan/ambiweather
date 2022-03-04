@@ -1,6 +1,5 @@
 <h2 align="center">
-  ⚠️ WIP ⚠️ 
-  Created for educational purposes.
+  ⚠️ WIP ⚠️ Prototype
 </h2>
 
 <h3 align="center">Ambiweather</h3>
